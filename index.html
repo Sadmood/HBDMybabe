@@ -50,39 +50,6 @@
       z-index: 1;
     }
 
-    /* ─── Music player ─── */
-    #music-btn {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      z-index: 100;
-      width: 52px; height: 52px;
-      border-radius: 50%;
-      background: var(--white);
-      border: 1px solid var(--blush-mid);
-      box-shadow: 0 4px 24px rgba(212,96,122,0.15);
-      cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      color: var(--rose);
-      font-size: 1.3rem;
-    }
-    #music-btn:hover { transform: scale(1.1); box-shadow: 0 8px 32px rgba(212,96,122,0.25); }
-    #music-btn.playing .icon-play  { display: none; }
-    #music-btn.playing .icon-pause { display: block; }
-    #music-btn .icon-pause { display: none; }
-
-    /* ─── Section base ─── */
-    section {
-      position: relative;
-      z-index: 2;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 6rem 2rem;
-    }
 
     /* ══════════════════════════════
        HERO
@@ -422,8 +389,6 @@
 <canvas id="petals-canvas"></canvas>
 
 
-<!-- Hidden audio (uses Web Audio API tones instead of external file) -->
-<audio id="bg-audio" loop></audio>
 
 <!-- ═══════════════ HERO ═══════════════ -->
 <section id="hero">
@@ -495,12 +460,12 @@
       <div class="card-title">ความรักที่งดงาม</div>
       <div class="card-body">ขอให้ความรักและไออุ่นจากคนรอบข้างโอบล้อมเธอตลอดไป</div>
     </div>
-    <div class="wish-card" data-reveal data-delay="600">
+    <div class="wish-card" data-reveal data-delay="480">
       <span class="card-icon">🎀</span>
       <div class="card-title">ปีที่ดีที่สุด</div>
       <div class="card-body">ขอให้ปีนี้เป็นปีที่สวยงามและน่าจดจำที่สุดในชีวิตของเธอ</div>
     </div>
-    <div class="wish-card" data-reveal data-delay="480">
+    <div class="wish-card" data-reveal data-delay="600">
       <span class="card-icon">⭐</span>
       <div class="card-title">อิอิ</div>
       <div class="card-body">เค้าก็อวยพรไม่ค่อยเก่งหรอก แต่เอาเป็นว่าพรขอไหนดี เค้ายกให้เธอหมดเลยนะครับ 🐷</div>
