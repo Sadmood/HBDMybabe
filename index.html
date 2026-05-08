@@ -58,6 +58,11 @@
       background: linear-gradient(160deg, #fff 0%, #FDE8EE 55%, #F9C9D4 100%);
       text-align: center;
       gap: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
     }
 
     /* Thin decorative lines */
@@ -66,6 +71,8 @@
       margin-bottom: 2rem;
       opacity: 0;
       animation: fadeUp 1.2s ease 0.2s forwards;
+      justify-content: center;
+      width: 100%;
     }
     .deco-line span { height: 1px; width: 60px; background: var(--blush-mid); display: block; }
     .deco-line p {
@@ -183,6 +190,7 @@
       opacity: 0;
       transform: translateY(40px);
       transition: opacity 1s ease, transform 1s ease;
+      margin: 0 auto;
     }
     .msg-container.visible { opacity: 1; transform: translateY(0); }
 
@@ -227,6 +235,10 @@
     #wishes {
       background: linear-gradient(180deg, #FDE8EE 0%, #fff 100%);
       gap: 4rem;
+      padding: 8rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .wishes-header {
@@ -259,6 +271,8 @@
       gap: 1.5rem;
       width: 100%;
       max-width: 860px;
+      justify-content: center;
+      margin: 0 auto;
     }
 
     .wish-card {
@@ -316,6 +330,10 @@
       background: var(--white);
       text-align: center;
       gap: 0;
+      padding: 8rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .closing-inner {
@@ -342,6 +360,7 @@
       color: var(--text-dark);
       line-height: 1.6;
       max-width: 560px;
+      margin: 0 auto;
     }
     .closing-quote .highlight {
       color: var(--rose);
@@ -387,8 +406,6 @@
 
 <!-- Petal rain -->
 <canvas id="petals-canvas"></canvas>
-
-
 
 <!-- ═══════════════ HERO ═══════════════ -->
 <section id="hero">
@@ -496,10 +513,7 @@
 
 <script>
   // ─── Date ───
-  const d = new Date();
-  const opt = { day: 'numeric', month: 'long', year: 'numeric' };
-  document.getElementById('hero-date').textContent =
-    d.toLocaleDateString('th-TH', opt);
+  document.getElementById('hero-date').textContent = '11 พฤษภาคม';
 
   // ─── Petal rain ───
   (function () {
@@ -571,10 +585,6 @@
     });
   }, { threshold: 0.15 });
   reveals.forEach(el => io.observe(el));
-
- 
-
-  
 </script>
 </body>
 </html>
